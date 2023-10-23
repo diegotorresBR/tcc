@@ -20,7 +20,7 @@ for i in range(largura):
             # Define a nova cor no pixel
             pixels[i, j] = (r, g, b)
 # Salvar a imagem invertida
-imagem_invertida = pixels.image
+imagem_invertida = imagem_original
 imagem_invertida.save("imagem_invertida.jpg")
 
 
