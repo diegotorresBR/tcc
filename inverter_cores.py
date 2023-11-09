@@ -22,5 +22,3 @@ for i in range(largura):
 # Salvar a imagem invertida
 imagem_invertida = imagem_original
 imagem_invertida.save("imagem_invertida.jpg")
-
-
