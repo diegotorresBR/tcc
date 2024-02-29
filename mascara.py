@@ -1,9 +1,25 @@
 from PIL import Image
 
-imagem_p_e_b = Image.open("imagem_para_inverter.jpeg")
-pixels = imagem_p_e_b.load()
+imagem_original = Image.open("imagem_desgaste.jpg")
+pixels = imagem_original.load()
+tam_vizi = (4,4)
 
-print(imagem_p_e_b.size)
-print(pixels[639, 359])
+larg, altu = imagem_original.size
+
 def vizinhanca():
+
+    for x in range(larg):
+
+        for y in range(altu):
+
+            #obtendo os vizinhos
+            for i in range(tam_vizi[0]+1):
+                pixels[x+i]
+
+            r,g,b = pixels[x,y]
+
+
+def operacao(pixel):
     pass
+
+vizinhanca()
