@@ -23,7 +23,7 @@ def vizinhanca():
                         vizinhos.append(pixels[x - 1 - i, y + 1 + j])
                         vizinhos.append(pixels[x - 1 - i, y - 1 - j])
             except:
-                pass
+                print("bordas")
             pixels[x,y] = operacao(vizinhos)
             vizinhos.clear()
     img_viz = imagem_original
@@ -42,11 +42,8 @@ def operacao(pixel):
         r = r // len(pixel)
         g = g // len(pixel)
         b = b // len(pixel)
-    else:
-        print("Erro ao operar")
+
     return r,g,b
-
-
 
 if __name__ == '__main__':
     imagem_original.show()
