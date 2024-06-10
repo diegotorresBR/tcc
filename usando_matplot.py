@@ -7,9 +7,9 @@ from PIL import Image
 def plot_intensity(image_path):
     # Carrega a imagem
     imag = Image.open(image_path)
-    img = imag.convert("L")
-    img.show()
-    pixels = img.load()
+    img = imag.convert("RGB")
+    # img.show()
+    # pixels = img.load()
 
     # Obtém as dimensões da imagem
     # height, width, _ = img.shape
@@ -37,7 +37,7 @@ def plot_intensity(image_path):
     plt.show()
 
 # Caminho para a sua imagem
-caminho_da_imagem = "baixo_con.jpeg"
+caminho_da_imagem = "gauss.jpeg"
 
 # Chama a função para plotar a intensidade
 plot_intensity(caminho_da_imagem)
