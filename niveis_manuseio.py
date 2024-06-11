@@ -2,8 +2,14 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
 
+import vizinhos
+
+img = Image.open("gauss.jpeg")
 def filtragem_espacial():
     #Precisa dessa função para definir qual a operação para gerar a imagem de saída
+    #soma para redução de ruídos
+
+    vizinhos.vizinhanca(img)
 
     pass
 def obter_valores_pixel_pb(caminho_imagem):
@@ -45,6 +51,6 @@ def plotar_valores_pb(matriz_pixels):
 
 
 # Exemplo de uso
-caminho_imagem = 'gauss.jpeg'
-matriz_pixels = obter_valores_pixel_pb(caminho_imagem)
-plotar_valores_pb(matriz_pixels)
+matriz_pixels = obter_valores_pixel_pb('gauss.jpeg')
+#plotar_valores_pb(matriz_pixels)
+filtragem_espacial()

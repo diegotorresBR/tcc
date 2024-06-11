@@ -1,12 +1,17 @@
 from PIL import Image
 
-imagem_original = Image.open("imagem_desgaste.jpg")
-pixels = imagem_original.load()
-tam_vizi = (2,4)
-vizinhos = []
-larg, altu = imagem_original.size
+#imagem_original = Image.open("imagem_desgaste.jpg")
+#pixels = imagem_original.load()
+#tam_vizi = (2,4)
+#vizinhos = []
+#larg, altu = imagem_original.size
 
-def vizinhanca():
+def vizinhanca(imagem = Image.open("imagem_desgaste.jpg"), tam_vizi=(2,2)):
+    imagem.show()
+    pixels = imagem.load()
+    vizinhos = []
+    larg, altu = imagem.sizez
+
     for x in range(larg):
         for y in range(altu):
             #obtendo os vizinhos
@@ -26,7 +31,7 @@ def vizinhanca():
                 print("bordas")
             pixels[x,y] = operacao(vizinhos)
             vizinhos.clear()
-    img_viz = imagem_original
+    img_viz = imagem
     img_viz.show()
 
 def operacao(pixel):
@@ -45,6 +50,10 @@ def operacao(pixel):
 
     return r,g,b
 
-if __name__ == '__main__':
-    imagem_original.show()
-    vizinhanca()
+
+imagem = Image.open("imagem_desgaste.jpg")
+vizinhanca(imagem)
+# if __name__ == '__main__':
+#     #imagem_original.show()
+#     imagem = Image.open("imagem_desgaste.jpg")
+#     vizinhanca(imagem)
