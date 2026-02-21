@@ -1,0 +1,20 @@
+# IDEs and Editors
+.idea/
+.vscode/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# General hidden files and folders
+.*
+!.gitignore
+!.github/
