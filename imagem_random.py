@@ -20,6 +20,6 @@ def plotar_grafico(niveis_cinza):
     plt.show()
 
 # Exemplo de uso
-imagem = "raio.jpg"  # Substitua pelo caminho da sua imagem
+imagem = "raio.jpg"  # Substitua pelo caminho da sua image
 niveis_cinza = obter_nivel_cinza(imagem)
 plotar_grafico(niveis_cinza)
