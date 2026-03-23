@@ -1,0 +1,349 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\usepackage[titletoc]{appendix}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{mathrsfs}
+
+\usepackage{listings}
+\usepackage{fancybox}
+\usepackage{hyperref}
+
+\usepackage{indentfirst}
+\usepackage[normalem]{ulem}
+\usepackage{enumerate}
+
+\usepackage{graphicx}
+\usepackage{tikz, tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	%total={170mm,257mm},
+	left=3cm,
+	right=3cm,
+	top=3cm,
+	bottom=3cm,
+	includefoot}
+
+
+\bibliographystyle{plain}
+
+\newenvironment{psmallmatrix}
+{\left(\begin{smallmatrix}}
+	{\end{smallmatrix}\right)}
+
+%\newtheorem{theorem}{Teorema}[section]
+%\newtheorem{Defini}{Definição}[section]
+\newtheorem{proposition}{Proposição}[section]
+\newtheorem{observation}{Observação}[section]
+%\newtheorem{Exemplo}{Exemplo}[section]
+%\newtheorem{Teo}{Teorema}[chapter]
+%\newtheorem{lema}[Teo]{Lema}
+
+\newtheorem{Defini}{\bf Definição}
+\newtheorem{Proposi}{\bf Proposição}
+\newtheorem{Lema}{\bf Lema}
+\newtheorem{Teo}{\bf Teorema}
+\newtheorem{Coro}{\bf Corolário}
+\newtheorem{Obs}{\bf Observação}
+\newtheorem{Exemplo}{\bf Exemplo}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+	\thispagestyle{empty}
+	
+	\begin{center}
+	
+	UNIVERSIDADE FEDERAL DO AMAZONAS\\
+    INSTITUTO DE CIÊNCIAS EXATAS\\
+    DEPARTAMENTO DE MATEMÁTICA
+
+\vspace{5 cm}
+\bf{DIEGO PAIVA TORRES}\\
+
+\vspace{5 cm}
+\begin{center}
+\Large {\bf {TÍTULO DO TRABALHO}}
+\end{center}
+
+
+\vspace{7cm}
+
+MANAUS - AM\\
+2026
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	
+\thispagestyle{empty}
+
+\begin{center}
+  \bf{DIEGO PAIVA TORRES} \vspace{7cm}\\
+  
+ \Large {\bf {TÍTULO DO TRABALHO}} \vspace{3cm}\\
+\end{center}
+
+\begin{flushright}
+\begin{minipage}[10cm]{8.5cm}
+{\footnotesize
+Trabalho de Conclusão de Curso apresentado ao Departamento de Matemática da Universidade Federal do Amazonas, como requisito para a obtenção do  título de Bacharel em Matemática Pura e Aplicada.\\ 
+}
+\end{minipage}
+\end{flushright}
+\vspace{1cm}
+
+\begin{center}
+    {\bf Orientador:} Prof. Dr. Dimas Morera Martinez
+\end{center}
+ 
+
+
+\vspace{4cm}
+\begin{center}
+    MANAUS-AM\\ 2026
+\end{center}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+\begin{center}
+	{\textbf{TERMO DE APROVAÇÃO}} 	
+\end{center}
+
+\vspace{1cm}
+
+\textbf{ACADÊMICA}: Diego Paiva Torres.\\
+
+\textbf{ÁREA DE CONCENTRAÇÃO}: Matemática Pura e Aplicada.\\
+
+\textbf{LINHA DE PESQUISA}: Processamento de Imagens.\\
+
+\textbf{GRADUAÇÃO EM MATEMÁTICA PURA E APLICADA}: Habilitação em Bacharelado.\\
+
+\textbf{TÍTULO DO TRABALHO DE CONCLUSÃO DE CURSO}: Título do Trabalho. \\
+
+\textbf{ORIENTADOR}: Prof. Dr. Dimas Morera Martinez.\\
+
+\vspace{5cm}
+
+\begin{center}
+    
+
+
+-----------------------------------------------------------------------------
+
+Prof. Dr.  Dimas Morera Martinez (Orientador)
+
+Universidade Federal do Amazonas (UFAM) - DM
+\vskip 1 cm
+
+-----------------------------------------------------------------------------
+
+Prof. Dr. Banca 1
+
+Universidade Federal do Amazonas (UFAM) - DM
+\vskip 1 cm
+
+-----------------------------------------------------------------------------
+
+Prof. Dr. Banca 2
+
+Universidade Federal do Amazonas (UFAM) - DM
+\end{center}
+
+
+ 
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\vspace*
+{\vfill}
+\begin{center}
+    \it{À minha família.}
+\end{center}
+\vfill
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \chapter*{\centering{Agradecimentos}}
+
+  
+ 
+\thispagestyle{empty}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{\centering Resumo}
+
+   
+
+
+\thispagestyle{empty} 
+
+\newpage
+
+\chapter*{\centering Abstract}
+
+
+
+
+\thispagestyle{empty} 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SUMARIO%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{titlepage}
+\tableofcontents
+\thispagestyle{empty}
+\end{titlepage}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Introdução}
+\addcontentsline{toc}{chapter}{Introdução}
+
+    
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Definições Básicas}
+
+Imagem
+
+f:R² (x,y) pertence R²
+
+Amplitude de f é chamada de nivel de cinza(intensidade) aplicada no ponto
+
+Quando (x,y) e f(x,y) são limitadas é chamada de Imagem digital
+
+Processamento Digital é qunado o mesmo é feito por um computador
+
+Visão computacional é quanda a entrada e saída são imagens
+
+Niveis. Baixo: pré-processamento para reduzir ruído
+
+Médio: separação de imagens em regiões para classificação. As saídas são atribuĩdas. Extraídas das imgagens
+
+Formação de Imagen
+
+    f: A --> R²
+    f: R² --> R⁺
+        (x,y) --> z
+
+Componentes
+
+i(x,y) quantidade de iluminação que incide na cena
+r(x,y) quantidade de iluminação refletida pelos objetos na cena
+
+    f(x, y) = i(x,y) . r(x,y) produto vetorial
+    s.a 0 < i(x,y) < infinito
+        0 < r(x,y) < 1
+
+    obs: 0 é absorção total e 1é relfetancia total
+
+Intensidade de Imagem(Monocromática)
+l = f(x0, y0)
+    (L_min <= l <= Lmax) > 0
+
+[L_min, L_max] - escala de cinza
+deslocamento: [0, L-1]
+l=0 é considerado preto
+l=L-1 branco na escala de cinza
+
+
+
+\section{Definições}
+
+    
+
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{O Teorema de Ascoli-Arzelá}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Aplicações}
+
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Conclusão}
+\addcontentsline{toc}{chapter}{Conclusão}
+
+
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Referências Bibliográficas}
+
+    \bibitem{Geraldo} ÁVILA, Geraldo Severo de Souza. Introdução à Análise Matemática. 2. ed. São Paulo: Blucher, 1999.
+
+    \bibitem{edo} DOERING, Claus Ivo; LOPES, Artur Oscar. Equações Diferenciais Ordinárias. 6. ed. Rio de Janeiro: IMPA, 2016. 
+
+    \bibitem{fino} LIMA, Elon Lages. Análise real volume 1. Funções de uma variável. 12. ed. Rio de Janeiro: IMPA, 2017.
+
+    \bibitem{Elon} LIMA, Elon Lages. Curso de Análise. 14. ed. Rio de Janeiro: IMPA, 1976. v. 1. 
+    
+    \bibitem{rn} LIMA, Elon Lages. Curso de Análise, Volume 2. Rio de Janeiro: IMPA, 1999.
+    
+    \bibitem{metricos} LIMA, Elon Lages. Espaços Métricos. 5. ed. Rio de Janeiro: IMPA, 2017.
+    
+    \bibitem{historia} EVES, Howard. Introdução à história da matemática / Howard Eves; tradução Hygino H. Domingues. 5a ed. - Campinas, SP: Editora da Unicamp, 2 0 11.
+    
+    \bibitem{Neri} NERI, Cassio; CABRAL, Marco. Curso de Análise Real. 1. ed. Rio de Janeiro.
+    
+	
+  
+	\end{thebibliography}
+
+
+\newpage
+
+
+ 
+
+
+\end{document}
+
