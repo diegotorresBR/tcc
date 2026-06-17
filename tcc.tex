@@ -58,292 +58,367 @@
 \newtheorem{Obs}{\bf Observação}
 \newtheorem{Exemplo}{\bf Exemplo}
 
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
-
-
-
+	
+	
+	
 	\thispagestyle{empty}
 	
 	\begin{center}
+		
+		UNIVERSIDADE FEDERAL DO AMAZONAS\\
+		INSTITUTO DE CIÊNCIAS EXATAS\\
+		DEPARTAMENTO DE MATEMÁTICA
+		
+		\vspace{5 cm}
+		\bf{DIEGO PAIVA TORRES}\\
+		
+		\vspace{5 cm}
+		\begin{center}
+			\Large {\bf {TÍTULO DO TRABALHO}}
+		\end{center}
+		
+		
+		\vspace{7cm}
+		
+		MANAUS - AM\\
+		2026
+	\end{center}
 	
-	UNIVERSIDADE FEDERAL DO AMAZONAS\\
-    INSTITUTO DE CIÊNCIAS EXATAS\\
-    DEPARTAMENTO DE MATEMÁTICA
-
-\vspace{5 cm}
-\bf{DIEGO PAIVA TORRES}\\
-
-\vspace{5 cm}
-\begin{center}
-\Large {\bf {TÍTULO DO TRABALHO}}
-\end{center}
-
-
-\vspace{7cm}
-
-MANAUS - AM\\
-2026
-\end{center}
-
-\thispagestyle{empty}
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\thispagestyle{empty}
 	
-\thispagestyle{empty}
-
-\begin{center}
-  \bf{DIEGO PAIVA TORRES} \vspace{7cm}\\
-  
- \Large {\bf {TÍTULO DO TRABALHO}} \vspace{3cm}\\
-\end{center}
-
-\begin{flushright}
-\begin{minipage}[10cm]{8.5cm}
-{\footnotesize
-Trabalho de Conclusão de Curso apresentado ao Departamento de Matemática da Universidade Federal do Amazonas, como requisito para a obtenção do  título de Bacharel em Matemática Pura e Aplicada.\\ 
-}
-\end{minipage}
-\end{flushright}
-\vspace{1cm}
-
-\begin{center}
-    {\bf Orientador:} Prof. Dr. Dimas Morera Martinez
-\end{center}
- 
-
-
-\vspace{4cm}
-\begin{center}
-    MANAUS-AM\\ 2026
-\end{center}
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\thispagestyle{empty}
-\begin{center}
-	{\textbf{TERMO DE APROVAÇÃO}} 	
-\end{center}
-
-\vspace{1cm}
-
-\textbf{ACADÊMICA}: Diego Paiva Torres.\\
-
-\textbf{ÁREA DE CONCENTRAÇÃO}: Matemática Pura e Aplicada.\\
-
-\textbf{LINHA DE PESQUISA}: Processamento de Imagens.\\
-
-\textbf{GRADUAÇÃO EM MATEMÁTICA PURA E APLICADA}: Habilitação em Bacharelado.\\
-
-\textbf{TÍTULO DO TRABALHO DE CONCLUSÃO DE CURSO}: Título do Trabalho. \\
-
-\textbf{ORIENTADOR}: Prof. Dr. Dimas Morera Martinez.\\
-
-\vspace{5cm}
-
-\begin{center}
-    
-
-
------------------------------------------------------------------------------
-
-Prof. Dr.  Dimas Morera Martinez (Orientador)
-
-Universidade Federal do Amazonas (UFAM) - DM
-\vskip 1 cm
-
------------------------------------------------------------------------------
-
-Prof. Dr. Banca 1
-
-Universidade Federal do Amazonas (UFAM) - DM
-\vskip 1 cm
-
------------------------------------------------------------------------------
-
-Prof. Dr. Banca 2
-
-Universidade Federal do Amazonas (UFAM) - DM
-\end{center}
-
-
- 
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\thispagestyle{empty}
-\vspace*
-{\vfill}
-\begin{center}
-    \it{À minha família.}
-\end{center}
-\vfill
-
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
- \chapter*{\centering{Agradecimentos}}
-
-  
- 
-\thispagestyle{empty}
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter*{\centering Resumo}
-
-   
-
-
-\thispagestyle{empty} 
-
-\newpage
-
-\chapter*{\centering Abstract}
-
-
-
-
-\thispagestyle{empty} 
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%SUMARIO%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{titlepage}
-\tableofcontents
-\thispagestyle{empty}
-\end{titlepage}
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter*{Introdução}
-\addcontentsline{toc}{chapter}{Introdução}
-
-    
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{Definições Básicas}
-
-Imagem
-
-f:R² (x,y) pertence R²
-
-Amplitude de f é chamada de nivel de cinza(intensidade) aplicada no ponto
-
-Quando (x,y) e f(x,y) são limitadas é chamada de Imagem digital
-
-Processamento Digital é qunado o mesmo é feito por um computador
-
-Visão computacional é quanda a entrada e saída são imagens
-
-Niveis. Baixo: pré-processamento para reduzir ruído
-
-Médio: separação de imagens em regiões para classificação. As saídas são atribuĩdas. Extraídas das imgagens
-
-Formação de Imagen
-
-    f: A --> R²
-    f: R² --> R⁺
-        (x,y) --> z
-
-Componentes
-
-i(x,y) quantidade de iluminação que incide na cena
-r(x,y) quantidade de iluminação refletida pelos objetos na cena
-
-    f(x, y) = i(x,y) . r(x,y) produto vetorial
-    s.a 0 < i(x,y) < infinito
-        0 < r(x,y) < 1
-
-    obs: 0 é absorção total e 1é relfetancia total
-
-Intensidade de Imagem(Monocromática)
-l = f(x0, y0)
-    (L_min <= l <= Lmax) > 0
-
-[L_min, L_max] - escala de cinza
-deslocamento: [0, L-1]
-l=0 é considerado preto
-l=L-1 branco na escala de cinza
-
-
-
-\section{Definições}
-
-    
-
-
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{O Teorema de Ascoli-Arzelá}
-
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{Aplicações}
-
-
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter*{Conclusão}
-\addcontentsline{toc}{chapter}{Conclusão}
-
-
-
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{thebibliography}{99}
-\addcontentsline{toc}{chapter}{Referências Bibliográficas}
-
-    \bibitem{Geraldo} ÁVILA, Geraldo Severo de Souza. Introdução à Análise Matemática. 2. ed. São Paulo: Blucher, 1999.
-
-    \bibitem{edo} DOERING, Claus Ivo; LOPES, Artur Oscar. Equações Diferenciais Ordinárias. 6. ed. Rio de Janeiro: IMPA, 2016. 
-
-    \bibitem{fino} LIMA, Elon Lages. Análise real volume 1. Funções de uma variável. 12. ed. Rio de Janeiro: IMPA, 2017.
-
-    \bibitem{Elon} LIMA, Elon Lages. Curso de Análise. 14. ed. Rio de Janeiro: IMPA, 1976. v. 1. 
-    
-    \bibitem{rn} LIMA, Elon Lages. Curso de Análise, Volume 2. Rio de Janeiro: IMPA, 1999.
-    
-    \bibitem{metricos} LIMA, Elon Lages. Espaços Métricos. 5. ed. Rio de Janeiro: IMPA, 2017.
-    
-    \bibitem{historia} EVES, Howard. Introdução à história da matemática / Howard Eves; tradução Hygino H. Domingues. 5a ed. - Campinas, SP: Editora da Unicamp, 2 0 11.
-    
-    \bibitem{Neri} NERI, Cassio; CABRAL, Marco. Curso de Análise Real. 1. ed. Rio de Janeiro.
-    
+	\newpage
 	
-  
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	
+	\thispagestyle{empty}
+	
+	\begin{center}
+		\bf{DIEGO PAIVA TORRES} \vspace{7cm}\\
+		
+		\Large {\bf {TÍTULO DO TRABALHO}} \vspace{3cm}\\
+	\end{center}
+	
+	\begin{flushright}
+		\begin{minipage}[10cm]{8.5cm}
+			{\footnotesize
+				Trabalho de Conclusão de Curso apresentado ao Departamento de Matemática da Universidade Federal do Amazonas, como requisito para a obtenção do  título de Bacharel em Matemática Pura e Aplicada.\\ 
+			}
+		\end{minipage}
+	\end{flushright}
+	\vspace{1cm}
+	
+	\begin{center}
+		{\bf Orientador:} Prof. Dr. Dimas Morera Martinez
+	\end{center}
+	
+	
+	
+	\vspace{4cm}
+	\begin{center}
+		MANAUS-AM\\ 2026
+	\end{center}
+	\newpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\thispagestyle{empty}
+	\begin{center}
+		{\textbf{TERMO DE APROVAÇÃO}} 	
+	\end{center}
+	
+	\vspace{1cm}
+	
+	\textbf{ACADÊMICA}: Diego Paiva Torres.\\
+	
+	\textbf{ÁREA DE CONCENTRAÇÃO}: Matemática Pura e Aplicada.\\
+	
+	\textbf{LINHA DE PESQUISA}: Processamento de Imagens.\\
+	
+	\textbf{GRADUAÇÃO EM MATEMÁTICA PURA E APLICADA}: Habilitação em Bacharelado.\\
+	
+	\textbf{TÍTULO DO TRABALHO DE CONCLUSÃO DE CURSO}: Título do Trabalho. \\
+	
+	\textbf{ORIENTADOR}: Prof. Dr. Dimas Morera Martinez.\\
+	
+	\vspace{5cm}
+	
+	\begin{center}
+		
+		
+		
+		-----------------------------------------------------------------------------
+		
+		Prof. Dr.  Dimas Morera Martinez (Orientador)
+		
+		Universidade Federal do Amazonas (UFAM) - DM
+		\vskip 1 cm
+		
+		-----------------------------------------------------------------------------
+		
+		Prof. Dr. Banca 1
+		
+		Universidade Federal do Amazonas (UFAM) - DM
+		\vskip 1 cm
+		
+		-----------------------------------------------------------------------------
+		
+		Prof. Dr. Banca 2
+		
+		Universidade Federal do Amazonas (UFAM) - DM
+	\end{center}
+	
+	
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\thispagestyle{empty}
+	\vspace*
+	{\vfill}
+	\begin{center}
+		\it{À minha família.}
+	\end{center}
+	\vfill
+	
+	\newpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter*{\centering{Agradecimentos}}
+	
+	
+	
+	\thispagestyle{empty}
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter*{\centering Resumo}
+	
+	
+	
+	
+	\thispagestyle{empty} 
+	
+	\newpage
+	
+	\chapter*{\centering Abstract}
+	
+	
+	
+	
+	\thispagestyle{empty} 
+	\newpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%SUMARIO%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	\begin{titlepage}
+		\tableofcontents
+		\thispagestyle{empty}
+	\end{titlepage}
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter*{Introdução}
+	\addcontentsline{toc}{chapter}{Introdução}
+	
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter{Definições Básicas}
+	Quando queremos guardar um registro de um evento de que vivenciamos, geralmente registramos isso através de fotos. E esse processo é feito através de algum dispositivo(ex. Cameras) que captura a fonte de luz da cena do mundo físico e da "refletãncia" da luz dos objetos na mesma. Após isso, é necessário descrever os objetos da cena e representa-los em alguma estrutura de forma que armazene as informações de posicão do elemento da imagem e da cor associada a ela, para o computador.
+	%Transformar dados em Imagens é basicamente a definição de Computação Gráfica. Utiliza-se técnicas e métodos para essa transformação e, para isto, utiliza-se um computador. Existem diversas áreas de estudo dentro desse campo de pesquisa tais como Processamento De Imagens, Visão Computacional, Visualização, entre outras. 
+	Para exemplificar, vamos olhar para uma fotografia em preto e branco. Nesse modelo temos:
+	- O recorte da foto, um retângulo, que iremos chamar de conjunto U, e por ser retangular temos $U \subset R^2$.
+	- Uma tonalidade de cinza associada a cada elemento do conjunto U. Essa tonalidade está no intervalo [0,1], onde 0 representa o preto e 1 o branco. Iremos chamar esse conjunto de intensidades de cinza de V
+	\newline Dessa forma, temos:\newline
+	
+	
+	Imagem
+	
+	Para uma imagem monocromátca: \newline
+	$$f:  \mathcal{U} \subset R^2 \to \mathcal{V}$$
+	$f$ com coordenadas $(x,y) \in R^2$
+	
+	U é domínio da Imagem(exemplo uma foto 800x600 px)
+	
+	Quando aplicado um ponto $f(x,y)$(ou seja, os valores de $\mathcal{V}$), dentro de um intervalo [0,L], obtemos o nível de intensidade, ou nivel de cinza
+	
+	Para imagens coloridas temos $f: U \to R^3$, onde podemos escrever $f_1(x,y), f_2(x,y), f_3(x,y)$, de modo que cada $f_i$ é uma imagem monocromática(chamadas de componentes de cor)
+	
+	
+	
+	Amplitude de f é chamada de nivel de cinza(intensidade) aplicada no ponto
+	
+	Quando (x,y) e f(x,y) são limitadas é chamada de Imagem digital
+	
+	Processamento Digital é qunado o mesmo é feito por um computador
+	
+	Visão computacional é quanda a entrada e saída são imagens
+	
+	Niveis. Baixo: pré-processamento para reduzir ruído
+	
+	Médio: separação de imagens em regiões para classificação. As saídas são atribuĩdas. Extraídas das imgagens
+	
+	Formação de Imagen
+	
+	f: A --> R²
+	f: R² --> R⁺
+	(x,y) --> z
+	
+	Componentes
+	
+	i(x,y) quantidade de iluminação que incide na cena
+	r(x,y) quantidade de iluminação refletida pelos objetos na cena
+	
+	f(x, y) = i(x,y) . r(x,y) produto vetorial
+	s.a 0 < i(x,y) < infinito
+	0 < r(x,y) < 1
+	
+	obs: 0 é absorção total e 1é relfetancia total
+	
+	Intensidade de Imagem(Monocromática)
+	l = f(x0, y0)
+	(L_min <= l <= Lmax) > 0
+	
+	[L_min, L_max] - escala de cinza
+	deslocamento: [0, L-1]
+	l=0 é considerado preto
+	l=L-1 branco na escala de cinza
+	
+	
+	Amostragem
+	
+	É a digitalização dos valores das coordenadas
+	
+	
+	Quantização
+	digitalização da f
+	conversão de ambas as formas a imagem digital
+	
+	Imagem Contínua
+	Ex: Amosragem de uma imagem em uma matriz 2-D MxN
+	
+	Domínio Espacial
+	x e y, coordenadas e z nivel de intensidade
+	
+	Representação Numérica
+	
+	f(x,y)= 
+	
+	Cada elemento da matriz é um pixel
+	
+	Origem
+	
+	L=f(min) = 2^k - intervalo
+	
+	Assim assume-se que os níveis de intensidade são igualmentes espaçados
+	f: Z^2 --> Z
+	
+	Saturação: Limite superior/inferior do L
+	
+	Ruído
+	
+	Contraste = Saturação - Ruído
+	
+	bits para armazenar Imagens
+	b=MxN = K?
+	
+	Interpolação
+	
+	Redimensionamento de Imagens
+	Consiste em utilizar dados existentes para estimar valores em pontos desconhecidos
+	
+	Ex: 500x500 --> 750x750
+	
+	Manter o espaçamento igual
+	Procurar o nivel do pixel mais proximo
+	
+	Bi-Linear
+	Usa os 4 vizinhos proximos para estimar a f
+	
+	f(x,y) = ax+by + cxy+ d
+	
+	Bicubica
+	16 vizinhos proximos
+	f(x,y) = 
+	Vizinhança
+	De forma geral, todo pixel tem 4 vizinhos
+	Matrizes e Arranjos
+	
+	
+	\section{Definições}
+	
+	
+	
+	
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter{O Teorema de Ascoli-Arzelá}
+	
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter{Aplicações}
+	
+	
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\chapter*{Conclusão}
+	\addcontentsline{toc}{chapter}{Conclusão}
+	
+	
+	
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{thebibliography}{99}
+		\addcontentsline{toc}{chapter}{Referências Bibliográficas}
+		
+		\bibitem{Geraldo} ÁVILA, Geraldo Severo de Souza. Introdução à Análise Matemática. 2. ed. São Paulo: Blucher, 1999.
+		
+		\bibitem{edo} DOERING, Claus Ivo; LOPES, Artur Oscar. Equações Diferenciais Ordinárias. 6. ed. Rio de Janeiro: IMPA, 2016. 
+		
+		\bibitem{fino} LIMA, Elon Lages. Análise real volume 1. Funções de uma variável. 12. ed. Rio de Janeiro: IMPA, 2017.
+		
+		\bibitem{Elon} LIMA, Elon Lages. Curso de Análise. 14. ed. Rio de Janeiro: IMPA, 1976. v. 1. 
+		
+		\bibitem{rn} LIMA, Elon Lages. Curso de Análise, Volume 2. Rio de Janeiro: IMPA, 1999.
+		
+		\bibitem{metricos} LIMA, Elon Lages. Espaços Métricos. 5. ed. Rio de Janeiro: IMPA, 2017.
+		
+		\bibitem{historia} EVES, Howard. Introdução à história da matemática / Howard Eves; tradução Hygino H. Domingues. 5a ed. - Campinas, SP: Editora da Unicamp, 2 0 11.
+		
+		\bibitem{Neri} NERI, Cassio; CABRAL, Marco. Curso de Análise Real. 1. ed. Rio de Janeiro.
+		
+		
+		
 	\end{thebibliography}
-
-
-\newpage
-
-
- 
-
-
+	
+	
+	\newpage
+	
+	
+	
+	
+	
 \end{document}
-
