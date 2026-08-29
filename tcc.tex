@@ -177,10 +177,9 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\thispagestyle{empty}
-	\vspace*
-	{\vfill}
+	\vfill
 	\begin{center}
-		\it{À minha família.}
+		\textit{À minha família.}
 	\end{center}
 	\vfill
 	
@@ -235,9 +234,18 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\chapter{Definições Básicas}
-	Quando queremos guardar um registro de um evento de que vivenciamos, geralmente registramos isso através de fotos. E esse processo é feito através de algum dispositivo(ex. Cameras) que captura a fonte de luz da cena do mundo físico e da "refletãncia" da luz dos objetos na mesma. Após isso, é necessário descrever os objetos da cena e representa-los em alguma estrutura de forma que armazene as informações de posicão do elemento da imagem e da cor associada a ela, para o computador.
+	Quando queremos guardar um registro de um evento que vivenciamos, geralmente registramos isso através de fotos. E esse processo é feito através de algum dispositivo (ex. câmeras) que captura a fonte de luz da cena do mundo físico e da "refletância" da luz dos objetos na mesma. Após isso, é necessário descrever os objetos da cena e representá-los em alguma estrutura de forma que armazene as informações de posição do elemento da imagem e da cor associada a ela, para o computador.
 	%Transformar dados em Imagens é basicamente a definição de Computação Gráfica. Utiliza-se técnicas e métodos para essa transformação e, para isto, utiliza-se um computador. Existem diversas áreas de estudo dentro desse campo de pesquisa tais como Processamento De Imagens, Visão Computacional, Visualização, entre outras. 
-	Para exemplificar, vamos olhar para uma fotografia em preto e branco. Nesse modelo temos:
+	Para exemplificar, vamos olhar para uma fotografia em preto e branco. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{arara_cinza.jpg}
+		\caption{Exemplo de Imagem Monocromática}
+		\label{fig:placeholder}
+	\end{figure}
+	
+	Nesse modelo temos:
 	- O recorte da foto, um retângulo, que iremos chamar de conjunto U, e por ser retangular temos $U \subset R^2$.
 	- Uma tonalidade de cinza associada a cada elemento do conjunto U. Essa tonalidade está no intervalo [0,1], onde 0 representa o preto e 1 o branco. Iremos chamar esse conjunto de intensidades de cinza de V
 	\newline Dessa forma, temos:\newline
@@ -259,101 +267,109 @@
 	
 	Amplitude de f é chamada de nivel de cinza(intensidade) aplicada no ponto
 	
-	Quando (x,y) e f(x,y) são limitadas é chamada de Imagem digital
+	Quando $(x,y)$ e $f(x,y)$ são limitados, é chamada de Imagem digital
 	
-	Processamento Digital é qunado o mesmo é feito por um computador
+	Processamento Digital é quando o mesmo é feito por um computador
 	
-	Visão computacional é quanda a entrada e saída são imagens
+	Visão computacional é quando a entrada e saída são imagens
 	
-	Niveis. Baixo: pré-processamento para reduzir ruído
+	Níveis. Baixo: pré-processamento para reduzir ruído
 	
-	Médio: separação de imagens em regiões para classificação. As saídas são atribuĩdas. Extraídas das imgagens
+	Médio: separação de imagens em regiões para classificação. As saídas são atribuídas, extraídas das imagens
 	
-	Formação de Imagen
+	Formação de Imagem
 	
-	f: A --> R²
-	f: R² --> R⁺
-	(x,y) --> z
+	\begin{align*}
+		f: A &\to \mathbb{R}^2 \\
+		f: \mathbb{R}^2 &\to \mathbb{R}^+ \\
+		(x,y) &\to z
+	\end{align*}
 	
-	Componentes
+	Componentes:
+	\begin{itemize}
+		\item $i(x,y)$: quantidade de iluminação que incide na cena
+		\item $r(x,y)$: quantidade de iluminação refletida pelos objetos na cena
+	\end{itemize}
 	
-	i(x,y) quantidade de iluminação que incide na cena
-	r(x,y) quantidade de iluminação refletida pelos objetos na cena
+	$$f(x, y) = i(x,y) \cdot r(x,y) \quad \text{(produto vetorial)}$$
+	\begin{align*}
+		\text{s.a. } & 0 < i(x,y) < \infty \\
+		             & 0 < r(x,y) < 1
+	\end{align*}
 	
-	f(x, y) = i(x,y) . r(x,y) produto vetorial
-	s.a 0 < i(x,y) < infinito
-	0 < r(x,y) < 1
+	Obs: $0$ é absorção total e $1$ é refletância total.
 	
-	obs: 0 é absorção total e 1é relfetancia total
+	Intensidade de Imagem (Monocromática):
+	$l = f(x_0, y_0)$
+	$$L_{\min} \leq l \leq L_{\max}$$
 	
-	Intensidade de Imagem(Monocromática)
-	l = f(x0, y0)
-	(L_min <= l <= Lmax) > 0
+	$[L_{\min}, L_{\max}]$ - escala de cinza
 	
-	[L_min, L_max] - escala de cinza
-	deslocamento: [0, L-1]
-	l=0 é considerado preto
-	l=L-1 branco na escala de cinza
+	Deslocamento: $[0, L-1]$
 	
+	$l=0$ é considerado preto
 	
-	Amostragem
-	
-	É a digitalização dos valores das coordenadas
+	$l=L-1$ é considerado branco na escala de cinza
 	
 	
-	Quantização
-	digitalização da f
-	conversão de ambas as formas a imagem digital
+	Amostragem:
 	
-	Imagem Contínua
-	Ex: Amosragem de uma imagem em uma matriz 2-D MxN
+	É a digitalização dos valores das coordenadas.
 	
-	Domínio Espacial
-	x e y, coordenadas e z nivel de intensidade
 	
-	Representação Numérica
+	Quantização:
+	- Digitalização de $f$.
+	- Conversão de ambas as formas em imagem digital.
 	
-	f(x,y)= 
+	Imagem Contínua:
+	Ex: Amostragem de uma imagem em uma matriz 2D $M \times N$.
 	
-	Cada elemento da matriz é um pixel
+	Domínio Espacial:
+	$x$ e $y$ são as coordenadas, e $z$ é o nível de intensidade.
 	
-	Origem
+	Representação Numérica:
+	$$f(x,y) = \dots$$
 	
-	L=f(min) = 2^k - intervalo
+	Cada elemento da matriz é um pixel.
 	
-	Assim assume-se que os níveis de intensidade são igualmentes espaçados
-	f: Z^2 --> Z
+	Origem:
 	
-	Saturação: Limite superior/inferior do L
+	$L = f_{\min} = 2^k$ - intervalo
+	
+	Assim, assume-se que os níveis de intensidade são igualmente espaçados:
+	$$f: \mathbb{Z}^2 \to \mathbb{Z}$$
+	
+	Saturação: limite superior/inferior de $L$.
 	
 	Ruído
 	
 	Contraste = Saturação - Ruído
 	
-	bits para armazenar Imagens
-	b=MxN = K?
+	Bits para armazenar Imagens:
+	$$b = M \times N \times k$$
 	
-	Interpolação
+	Interpolação:
 	
-	Redimensionamento de Imagens
-	Consiste em utilizar dados existentes para estimar valores em pontos desconhecidos
+	Redimensionamento de Imagens:
+	Consiste em utilizar dados existentes para estimar valores em pontos desconhecidos.
 	
-	Ex: 500x500 --> 750x750
+	Ex: $500 \times 500 \to 750 \times 750$
 	
-	Manter o espaçamento igual
-	Procurar o nivel do pixel mais proximo
+	- Manter o espaçamento igual.
+	- Procurar o nível do pixel mais próximo.
 	
-	Bi-Linear
-	Usa os 4 vizinhos proximos para estimar a f
+	Bilinear:
+	Usa os 4 vizinhos mais próximos para estimar $f$:
+	$$f(x,y) = ax + by + cxy + d$$
 	
-	f(x,y) = ax+by + cxy+ d
+	Bicúbica:
+	- 16 vizinhos mais próximos.
+	- $f(x,y) = \dots$
 	
-	Bicubica
-	16 vizinhos proximos
-	f(x,y) = 
-	Vizinhança
-	De forma geral, todo pixel tem 4 vizinhos
-	Matrizes e Arranjos
+	Vizinhança:
+	De forma geral, todo pixel tem 4 vizinhos.
+	
+	Matrizes e Arranjos:
 	
 	
 	\section{Definições}
@@ -406,7 +422,7 @@
 		
 		\bibitem{metricos} LIMA, Elon Lages. Espaços Métricos. 5. ed. Rio de Janeiro: IMPA, 2017.
 		
-		\bibitem{historia} EVES, Howard. Introdução à história da matemática / Howard Eves; tradução Hygino H. Domingues. 5a ed. - Campinas, SP: Editora da Unicamp, 2 0 11.
+		\bibitem{historia} EVES, Howard. Introdução à história da matemática / Howard Eves; tradução Hygino H. Domingues. 5a ed. - Campinas, SP: Editora da Unicamp, 2011.
 		
 		\bibitem{Neri} NERI, Cassio; CABRAL, Marco. Curso de Análise Real. 1. ed. Rio de Janeiro.
 		
