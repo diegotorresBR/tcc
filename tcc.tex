@@ -236,12 +236,12 @@
 	\chapter{Definições Básicas}
 	Quando queremos guardar um registro de um evento que vivenciamos, geralmente registramos isso através de fotos. E esse processo é feito através de algum dispositivo (ex. câmeras) que captura a fonte de luz da cena do mundo físico e da "refletância" da luz dos objetos na mesma. Após isso, é necessário descrever os objetos da cena e representá-los em alguma estrutura de forma que armazene as informações de posição do elemento da imagem e da cor associada a ela, para o computador.
 	%Transformar dados em Imagens é basicamente a definição de Computação Gráfica. Utiliza-se técnicas e métodos para essa transformação e, para isto, utiliza-se um computador. Existem diversas áreas de estudo dentro desse campo de pesquisa tais como Processamento De Imagens, Visão Computacional, Visualização, entre outras. 
-	Para exemplificar, vamos olhar para uma fotografia em preto e branco. 
+	Para exemplificar, vamos olhar para uma fotografia em escala de cinza. 
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\linewidth]{arara_cinza.jpg}
-		\caption{Exemplo de Imagem Monocromática}
+		\caption{Exemplo de Imagem em escala de cinza}
 		\label{fig:placeholder}
 	\end{figure}
 	
@@ -251,7 +251,7 @@
 	\newline Dessa forma, temos:\newline
 	
 	
-	Imagem
+	\section{Imagem}
 	
 	Para uma imagem monocromátca: \newline
 	$$f:  \mathcal{U} \subset R^2 \to \mathcal{V}$$
@@ -261,11 +261,37 @@
 	
 	Quando aplicado um ponto $f(x,y)$(ou seja, os valores de $\mathcal{V}$), dentro de um intervalo [0,L], obtemos o nível de intensidade, ou nivel de cinza
 	
-	Para imagens coloridas temos $f: U \to R^3$, onde podemos escrever $f_1(x,y), f_2(x,y), f_3(x,y)$, de modo que cada $f_i$ é uma imagem monocromática(chamadas de componentes de cor)
+	Para imagens coloridas temos $f: U \to R^3$, onde podemos escrever $f_1(x,y), f_2(x,y), f_3(x,y)$, de modo que cada $f_i$ é uma imagem monocromática(chamadas de componentes de cor, g, e que geralmente, as cores monocromáticas seriam: $i_1$ é vermelho, $i_2$ verde e $i_3$ azul, em inglês RGB)
 	
+	\subsection{Gráfico}
 	
+	Podemos visualizar uma imagem geometricamente, que chamaremos de $G(f)$, onde:
+	$G(f) = \{(x,y,z): (x,y) \in U\}$ e $z=f(x,y)$
 	
-	Amplitude de f é chamada de nivel de cinza(intensidade) aplicada no ponto
+	Vamos considerar $z$ como altura em cada ponto do dominio.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{grafico_imagem_3d.png}
+		\caption{Gráfico da Figura 1.1}
+		\label{fig:placeholder}
+	\end{figure}
+	
+	\section{Amostragem}
+	
+	%Amplitude de f é chamada de nivel de cinza(intensidade) aplicada no ponto
+	Afim de criar uma imagem digital é necessário converter os dados captados do mundo real para alguma discretização. Um primeiro processo onde essa conversão ocorre é a Amostragem, que consiste em digitalizar os valores das coordenadas $(x,y)$. Definimos U como:
+	
+	$U = [a,b]$ x $[c,d] = \{(x,y) \in R^2; a<=x<=b$ e $c<=y<=d\}.$
+	E iremos discretizar esse retangulo para um reticulado bidimensional.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{malha_bidimensional.jpeg}
+		\caption{Malha Bidimensional}
+		\label{fig:placeholder}
+	\end{figure}
+	De forma prática, a Amostragem define a resolução(ex: 800x600px) de uma imagem digital, e cada elemento dessa malha, corresnponde a 1 pixel com coordenadas (x,y).
 	
 	Quando $(x,y)$ e $f(x,y)$ são limitados, é chamada de Imagem digital
 	
@@ -294,7 +320,7 @@
 	$$f(x, y) = i(x,y) \cdot r(x,y) \quad \text{(produto vetorial)}$$
 	\begin{align*}
 		\text{s.a. } & 0 < i(x,y) < \infty \\
-		             & 0 < r(x,y) < 1
+		& 0 < r(x,y) < 1
 	\end{align*}
 	
 	Obs: $0$ é absorção total e $1$ é refletância total.
